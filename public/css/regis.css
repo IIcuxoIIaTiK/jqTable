@@ -1,0 +1,533 @@
+
+/*******************/
+h2, .spisok, .vibor{
+    text-align: center;
+}
+label {
+    font-weight: 200 !important;
+}
+.inp{
+    margin:7px 0 5px 0;
+}
+.ramka, .ramka1{
+    border-style: dotted;
+    padding: 1px;
+    border-color: rgba(114, 114, 114, 0.52);
+    border-radius: 4px;
+}
+.ramka{
+    border-bottom:none;
+}
+
+.buton, .butona div.col-lg-2{
+    margin-top:10px;
+    /*float:right;*/
+    margin-bottom: 10px;
+    text-decoration: none !important;
+
+}
+.buton button, .buton button:hover, .buton a:hover,.butona div.col-lg-2 a:hover{
+    /*width:160px;*/
+    /*height: 36px;*/
+    /*color:black;*/
+    text-decoration: none;
+}
+.butona div.col-lg-2{
+    width:195px;
+}
+.log{
+    float:right;
+}
+.spisok{
+    color: #ababab;
+}
+.vibor{
+    color: rgba(53, 48, 134, 0.46);
+}
+.podskazka{
+    transition: opacity 0.2s 0s ease;
+    position: relative;
+}
+.podskazka:hover:after{
+    display: inline;
+    background: rgba(102, 205, 170, 0.29);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #000000;
+    content: attr(abbr);
+    left: 40%;
+    top:30%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: auto;
+    height: 85px;
+}
+.podskazka:hover:before{ /* ��������� ��������� ����� ����� ����������� ��������� */
+    border: solid;
+    border-color: #66CDAA transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
+.tab th{
+    font-family: Arial !important;
+    font-size: 12px;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center
+}
+.but1 button, .but1 button:hover{
+    width: 100px;
+    color:black;
+}
+.but1 a:hover, .but a{
+    color:black;
+}
+.zag{
+    color:white;
+}
+.names{
+    min-width: 250px;
+    /*width:1000px !important; */
+}
+.tablet{
+    margin-left:-50px;
+    min-width: 1250px;
+}
+.butons, .butons1{
+    width: 150px;
+    height: 150px;
+    background: white;
+    font-weight: bold;
+    border-style: dashed;
+    padding:7px;
+    border-color: black;
+    margin:5px 0 0 20px;
+}
+.butons{
+    font-size:100px;
+    color: rgba(0, 0, 0, 0.31);
+}
+.butons1{
+    font-size:50px;
+    color: rgb(0, 177, 0) !important;
+    padding-top:40px;
+}
+.check{
+    position:absolute;
+    right:25%;
+    top:5%;
+}
+.checks{
+    visibility:hidden !important;
+}
+.link_group a {
+    display:inline-block;
+    vertical-align:top;
+    *zoom:1 ;
+    position:relative;
+    text-decoration:none;
+    color:#ffffff;
+    behavior: url(PIE.htc);
+}
+.link_group a:hover {
+    color:#ffffff;
+}
+.popup {
+    padding:5px 15px 15px;
+    position:fixed;
+    top:100px;
+    left:50%;
+    display:none;
+    overflow:hidden;
+    border:1px solid #ccc;
+    background:#fff;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    z-index:100;
+    behavior: url(PIE.htc);
+    margin-left:-200px;
+    width:570px;
+}
+.popup h2 {
+    font:bold 18px/32px Arial, san-serif;
+}
+.popup a.close {
+    width:16px;
+    height:16px;
+    display:block;
+    text-indent:-9999px;
+    position:absolute;
+    top:10px;
+    right:10px;
+    background: black;
+    color: black;
+}
+.popup form  {
+    margin-top:10px;
+}
+.popup label{
+    width:100px;
+    height:26px;
+    font:bold 12px/26px Arial, san-serif;
+    display:inline-block;
+    vertical-align:top;
+    *display:inline;
+    *zoom:1;
+}
+.popup input[type=text], .popup input[type=password]{
+    margin-bottom:10px;
+    padding:0 3px;
+    font:bold 12px/26px Arial, san-serif;
+    border:1px solid #ccc;
+}
+.popup input[type=submit]{
+    margin:10px 15px 0 0;
+    padding:3px 10px;
+    float:right;
+    background:#ccc;
+    border:0;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    font:bold 10px Arial, san-serif;
+    text-transform:uppercase;
+    position:relative;
+    cursor:pointer;
+    behavior: url(PIE.htc);
+}
+.popup input[type=submit]:hover{
+    color:#fff;
+}
+#overlay, .overlay1:active {
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    display:none;
+    background:#000;
+    opacity:.9;
+    z-index:15;
+}
+.overlay1:active {
+    z-index:0;
+}
+.nub{
+    float:right;
+    position: absolute;
+    bottom:15px;
+    right:15px;
+}
+.but_ramer, .but_ramer1{
+    width:149px;
+}
+.but_ramer{
+    float:right;
+    position: absolute;
+    bottom:15px;
+    right:15px;
+    margin-top:5px;
+}
+.knop{
+    width:250px;
+    height:40px;
+    margin:10px 0 0 -35px;
+}
+/*.new_file{*/
+    /*margin:20px 0 0 5px;*/
+/*}*/
+
+.size_img {
+    width: 100px;
+    height: 100px;
+}
+.But{
+    /*height:30px;*/
+    /*line-height: 15px;*/
+    margin-bottom:5px;
+}
+
+
+#menu ul li .active_menu {
+    color: #fff;
+    background: black;
+}
+.wrappCode {
+    position: relative;
+    border: 1px solid #CCCCCC;
+}
+#textCode{
+    height:21px;
+    vertical-align: top;
+    background-color: white;
+    padding-right: 20px;
+    border: none;
+    /*width: 97%;*/
+    position: relative;
+    display: inline;
+    border-bottom: 1px solid #959FA9;
+}
+#div_code {
+    height: 70px;
+    /*width: 500px;*/
+    /*border: 1px solid #CCCCCC;*/
+    overflow: auto; !important;
+    position: relative;
+    margin-top:36px;
+}
+.checkCode {
+    position: absolute;
+    top: 0px;
+    right: 1px;
+}
+#classCode{
+    margin-bottom:10px;
+}
+/*ul .ui-menu-item, ul .ui-menu-item:hover {*/
+   /*width: 1137px !important;*/
+
+/*}*/
+#butt_del_code{
+    height: 70px;
+    display:none;
+    margin-top:36px;
+}
+#subject_took_NPA{
+
+}
+#selectable, .edit, #registration{
+    background: white;
+    list-style: none;
+    position:absolute;
+    display:none;
+    z-index: 100;
+    width:1140px;
+    border: 1px solid #dddddd;
+    max-height:200px;
+    box-shadow:0 0 10px rgba(0,0,0,.25);
+    overflow: auto;
+}
+#selectable li, .edit li, #registration li{
+    height:30px;
+    line-height: 30px;
+    margin-left:-40px;
+    padding-left:40px ;
+}
+#selectable li:hover, .edit li:hover, #registration li:hover{
+    background: #9ed2ff;
+    list-style: none;
+    border: 1px solid #428bca;
+    font-weight: bold;
+}
+body{
+    background: #e8e8e8;
+    /*-moz-user-select: none;*/
+    /*-webkit-user-select: none;*/
+    /*-ms-user-select: none;*/
+    /*-o-user-select: none;*/
+    /*user-select: none;*/
+}
+
+.knop{
+    position: absolute;
+}
+#info_requisites{
+    margin-bottom:5px;
+}
+.table{
+    margin-bottom: 0 !important;
+    background: white;
+}
+.buts{
+    color:white;
+    border:1px solid white;
+    margin-top:5px;
+    border-radius: 0;
+}
+.buts:hover, .buts:focus{
+    background:white;
+    color:black;
+}
+.drop_menu{
+    border-radius:0;
+}
+.drop_menu li a{
+    text-align: left;
+}
+th{
+    text-align: center;
+}
+.flag, .flag1{
+    position:fixed;
+    top:160px;
+    opacity: 0.8;
+    height:84%;
+    z-index: -9999999;
+
+}
+.flag1{
+left:35%;
+}
+#colorSelector,#colorSelector2,
+#colorSelector_text,#colorSelector2_text,
+#colorSelector_table, #colorSelector_table_discrepancy{
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background: url(../img/colorpicker/select.png);
+}
+#colorSelector div, #colorSelector2 div,
+#colorSelector_text div, #colorSelector2_text div,
+#colorSelector_table div, #colorSelector_table_discrepancy div{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    background: url(../img/colorpicker/select.png) center;
+}
+.setting_zag{
+    text-align: center;
+    margin:20px 0 10px 0;
+}
+.opacit{
+    opacity: 1.5 !important;
+}
+#span_code_registry .col-lg-10 p, #span_code_register .col-lg-10 p{
+    margin-top:5px;
+}
+noscript img{
+    position:fixed;
+    z-index:999999;
+    /*background: url(../img/134.jpg);*/
+    /*background-repeat: repeat;*/
+    width:1262px;
+
+}
+.error{
+    list-style: none;
+    text-align: center;
+}
+.danger_input{
+    border-color: #a94442 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(169, 68, 66, 0.54) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(169, 68, 66, 0.54) !important;
+    outline: 0 !important;
+}
+.success_input{
+    border-color: #3c763d !important;
+    outline: 0 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(60, 118, 61, 0.5) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(60, 118, 61, 0.5) !important;
+}
+
+.access h1{
+    font-weight: bold !important;
+    text-align: center;
+    color: #d5757a !important;
+    margin-top:5% !important;
+    font-size: 65px !important;
+}
+.access img{
+    margin:5% 0 0 36%;
+    height: 300px;
+}
+.place::-webkit-input-placeholder {
+    color:#c0392b;
+}
+.place::-moz-placeholder          {
+    color:#c0392b;
+}/* Firefox 19+ */
+.place:-moz-placeholder           {
+    color:#c0392b;
+}/* Firefox 18- */
+.place:-ms-input-placeholder      {
+    color:#c0392b;
+}
+#name_doc{
+    display: none;
+    margin-top:0;
+}
+#law, #add_rol {
+    display: none;
+}
+#add_rol input{
+margin-top:20px;
+}
+#roles button{
+    margin-top:20px;
+}
+.delete_add{
+    margin-top:75px;
+}
+.back{
+ background: white;
+}
+.back div.modal-content{
+    background: #d3cbc2;
+}
+.knok_knok ul li.active span, .knok_knok ul li.active span:hover{
+    background: #3c3c3c;
+    border: #595959;
+}
+.knok_knok ul li a{
+   color: #232323;
+}
+.knok_knok ul li a:hover{
+   color:black;
+}
+.classifier_code{
+    display: none;
+    margin-left:19px;
+    /*width:568px !important;*/
+}
+#errors_classifier{
+    /*margin: 0 10px 0 10px;*/
+    text-align: center;
+    display:none;
+}
+#Register{
+    display:none;
+}
+#Register .row{
+  margin-top:5px;
+}
+.text_doc{
+border:1px solid #b3b3b3;
+}
+.text_doc, .text_doc:hover{
+    border-radius:3px;
+    padding:5px 0 5px 0;
+    text-align: center;
+    font-size:12px;
+    cursor: pointer;
+}
+.text_doc:hover{
+border:1px solid #a5a5a5;
+   background: #e3e3e3;
+}
+.label_error{
+    margin:20px 0 0 150px;
+}
+
+.margin {
+    margin:15px 0 !important;
+}
+
+/*.block{*/
+    /*background: #e8e8e8 !important;*/
+    /*padding:0;*/
+/*}*/
+.glav{
+    background: #e8e8e8;
+    padding-bottom:15px;
+}
+.glav .row{
+    margin: 0;
+}

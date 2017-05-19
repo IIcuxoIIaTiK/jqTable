@@ -1,0 +1,121 @@
+
+html, body {
+    background: #1d1623;
+    color: #4783a0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    margin: 0;
+
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+.content-welcome {
+    transition: width 0.5s ease, visibility 0s, opacity 0.5s linear;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    /*padding-left: 200vw;*/
+}
+.content-welcome.show {
+    padding-left: 0vw;
+    opacity: 1;
+    visibility: visible;
+    width: 100vw;
+}
+.content-login {
+    transition: width 0.5s ease, visibility 0s, opacity 0.5s linear;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    /*padding-bottom: 200vh;*/
+}
+.content-login.show {
+    padding-bottom: 0vh;
+    opacity: 1;
+    visibility: visible;
+    width: 100vw;
+}
+.content-register {
+    transition: width 0.5s ease, visibility 0s, opacity 0.5s linear;
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    /*padding-right: 200vw;*/
+}
+.content-register.show {
+    padding-right: 0vw;
+    opacity: 1;
+    visibility: visible;
+    width: 100vw;
+}
+
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.links > a:hover {
+    color: #98d0ec;
+}
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+/* /////////////////////auth///////////////////// */
+
+
+/* ///////login/////// */
+#password, #email{
+    color: blue !important;
+    font-size: large;
+    font-weight: 700;
+    height: 40px;
+    padding-left: 40px;
+
+}
+
+span.glyphicon {
+    position: absolute;
+    left: 0px;
+    width: 39px;
+    top: 0px;
+    height: 40px;
+    padding-top: 13px;
+    border-right: 3px solid blue;
+}
+
