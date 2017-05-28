@@ -135,7 +135,7 @@
 
             </div>
 
-            <button id="start_test">ПОГНАЛИ</button>
+            <button id="start_test">Пройти тест</button>
             <form action="" id="form_answer">
                 <div class="test-answer_block">
 

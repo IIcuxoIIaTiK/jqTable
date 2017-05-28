@@ -109,6 +109,10 @@ html, body {
 
 }
 
+input,label,a{
+    font-weight: 700 !important;
+}
+
 span.glyphicon {
     position: absolute;
     left: 0px;

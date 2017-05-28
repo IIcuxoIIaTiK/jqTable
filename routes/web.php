@@ -19,7 +19,8 @@ Route::group(['prefix' => 'auth'],
 Route::get('/command_run',
     function () {
 //    $output1 = `php ../artisan migrate:refresh`;
-        $output1 = `php ../artisan make:auth`;
+//        $output1 = `../composer.phar dump-autoload -o`;
+        $output1 = `php ../artisan migrate:refresh --seed`;
         $output  = `pwd`;
         echo($output1);
     }
@@ -51,7 +52,7 @@ Route::post('/go_test/{id}', ['as'=>'postTest', 'uses'=>'TestController@postTest
 
 Route::group(['middleware' => ['web', 'auth']],
     function () {
-        Route::get('/home', 'HomeController@index');
+        Route::get('/home', ['as'=>'get.home', 'uses'=>'HomeController@index']);
         Route::get('/set_locale/{locale}', ['uses' => 'HomeController@setLocale']);
 
         Route::get('/add_tag/', ['uses' => 'UserController@addTag'])->name('add_tag_to_current_user');

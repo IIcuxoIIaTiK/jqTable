@@ -31,4 +31,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany('App\Tags');
     }
+
+    public function result()
+    {
+        return $this->belongsToMany('App\ResultTests');
+    }
 }

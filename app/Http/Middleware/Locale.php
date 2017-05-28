@@ -24,8 +24,8 @@ class Locale
         if (in_array($raw_locale, Config::get('app.locales'))) {  # Проверяем, что у пользователя в сессии установлен доступный язык
             $locale = $raw_locale;                                # (а не какая-нибудь бяка)
         } else {
-            $locale = Config::get('app.locale');
         }                 # В ином случае присваиваем ей язык по умолчанию
+        $locale = Config::get('app.locale');
 
         App::setLocale($locale);                                  # Устанавливаем локаль приложения
 

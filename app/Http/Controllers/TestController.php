@@ -61,7 +61,7 @@ class TestController extends Controller
         } else if($test->tags_id == 'null'){
             $go = true;
         }
-        if($this->user != null) {
+        if($this->user == null) {
             $go = true;
         }
         if($go){
@@ -95,7 +95,7 @@ class TestController extends Controller
                 foreach ($questions[$key]['answer'] as $sub_key=>$sub_value){
                     if($sub_value['text_answer'] == $value){
                         $user_ball += $sub_value['weight_answer'];
-                        $right_answer[]=$key;
+                        $right_answer[]['right']=$key;
                     }
                 }
             }
@@ -120,16 +120,16 @@ class TestController extends Controller
                 }
                 $result_checkbox = 0;
 
-                if(!$failed && $checkbox_max_value != 0 && $user_ball_checkbox != 0 && ($checkbox_max_value == $user_ball_checkbox)){
-                    $result_checkbox = 1;
-                    $right_answer[] = $key;
+                if(!$failed && $checkbox_max_value != 0 && $user_ball_checkbox != 0 ){
+                    $result_checkbox = $user_ball_checkbox/$checkbox_max_value;
+                    $right_answer[]['right'] = $key;
                 }
                 $user_ball += $result_checkbox;
             }
             if($questions[$key]['type_question'] == 3 ){
                 if(mb_strtolower($questions[$key]['text_answer']) == mb_strtolower($value)){
                     $user_ball += 1;
-                    $right_answer[]=$key;
+                    $right_answer[]['right']=$key;
                 }
             }
 

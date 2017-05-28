@@ -8,16 +8,16 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <link href="/fonts/css.css" rel="stylesheet" type="text/css">
+        <script   src="/plugins/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/bs-3_3_7//bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
         <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/bs-3_3_7/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
         <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="/js/bs-3_3_7/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <!-- Styles -->
         <link href="/css/welcome.css" rel="stylesheet" type="text/css">
 
@@ -35,13 +35,14 @@
 
                     @if (Route::has('login'))
                         @if (Auth::check())
-                            <a href="{{ route('get.create_test') }}">@lang('menu.home')</a>
+                            <a href="{{ route('get.home') }}">@lang('menu.home')</a>
                             <a href="{{ url('/logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                 @lang('menu.logout')
                             </a>
                         @else
+                            <a class="show_welcome" href="#">Главная</a>
                             <a href="{{ url('/auth/login') }}" class="show_login">@lang('menu.login')</a>
                             <a href="{{ url('/auth/register') }}" class="show_register">@lang('menu.register')</a>
                         @endif
@@ -64,20 +65,17 @@
                     @lang('menu.login')
                 </div>
 
-                <a class="show_welcome" href="#">отмена</a>
                 <div class="links">
                    @include('auth.login')
                 </div>
             </div>
             <div class="content content-register">
                 <div class="title m-b-md">
-                    content-register
+                    @lang('menu.register')
                 </div>
 
-                <a class="show_welcome" href="#">отмена</a>
                 <div class="links">
-                    <a href="{{ route('get.create_test') }}">Создать тест</a>
-                    <a  disabled="">Руководство</a>
+                    @include('auth.register')
                 </div>
             </div>
 
