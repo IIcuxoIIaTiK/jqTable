@@ -133,13 +133,41 @@
 </div>
 
 <div class="settings_container display_containers" >
-    <div class="row form-group" data-block="applicant_">
-        <div class="col-xs-2">
-            <span class="form-inline">Время прохождения теста (минуты)</span>
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="row form-group" data-block="applicant_">
+                    <div class="col-xs-12">
+                        <span class="form-inline">Время прохождения теста (минуты)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <!--    Таблица заявителя    -->
+                <div class="row form-group">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">
+                        <input style="border: none;" class="form-control form-inline test_time" placeholder="Минуты" value="60">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-10">
-            <input style="border: none;" class="form-control form-inline test_time" placeholder="Минуты">
-        </div>
+        {{--<div class="panel panel-primary">--}}
+            {{--<div class="panel-heading">--}}
+                {{--<div class="row form-group" data-block="applicant_">--}}
+                    {{--<div class="col-xs-12">--}}
+                        {{--<span class="form-inline">Кол-во попыток(раз)</span>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="panel-body">--}}
+                {{--<!--    Таблица заявителя    -->--}}
+                {{--<div class="row form-group">--}}
+                    {{--<div class="col-lg-12 col-md-12 col-xs-12 col-xs-12">--}}
+                        {{--<input style="border: none;" class="form-control form-inline test_count" placeholder="1" value="1">--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
     </div>
 </div>
 

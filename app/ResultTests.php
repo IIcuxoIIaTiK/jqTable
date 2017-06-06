@@ -14,6 +14,10 @@ class ResultTests extends Model
     protected $fillable = [
         'test_id',
         'user_id',
+        'result',
+        'max_ball',
+        'user_ball',
+
     ];
 
     /**
@@ -24,4 +28,16 @@ class ResultTests extends Model
     protected $hidden = [
 
     ];
+
+    protected $table = 'result_tests';
+
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+    public function test()
+    {
+        return $this->belongsTo('App\Test');
+    }
 }

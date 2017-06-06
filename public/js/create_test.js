@@ -174,10 +174,10 @@ $(function() {
             tag: $('#select_tag').val(),
             settings_test: {
                 time: $('.test_time').val(),
+                count: $('.test_test_count').val(),
             },
             questions: model_questions
         }
-        console.log(JSON.stringify(send_var))
 
         localStorage.setItem('send_var', JSON.stringify(send_var));
 

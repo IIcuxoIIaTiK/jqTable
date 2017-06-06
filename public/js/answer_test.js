@@ -121,6 +121,7 @@ $(function() {
 
         if(stop_timer == false){
             ajaxToViewCallback({url: undefined, type: 'post', data: $('#form_answer').serialize(), notification: true}, function($data) {
+                console.log($data);
                 $.each($data.right_answer, function(index, item) {
                     $('.count_answer_'+item).addClass('right_answer');
 

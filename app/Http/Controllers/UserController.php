@@ -51,7 +51,7 @@ class UserController extends Controller
 
         $tags_id = [];
         foreach ($this->user->tags()->get()->toArray() as $value ){
-            $tags_id[] = $value['pivot']['tags_id'];
+            $tags_id[$value['pivot']['tags_id']]['name'] = $value['name'];
         }
 
         return response()->json(['error' => null, 'message' => 'Добавлено', 'data' => ['tags_id' => $tags_id]]);

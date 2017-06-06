@@ -18,6 +18,7 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -34,6 +35,11 @@ class User extends Authenticatable
 
     public function result()
     {
-        return $this->belongsToMany('App\ResultTests');
+        return $this->belongsToMany('App\ResultTests', 'users', 'user_id', 'user_id');
+    }
+
+    public function external_system()
+    {
+        return $this->belongsTo('App\ExternalSystem', 'key_external_sources','key');
     }
 }

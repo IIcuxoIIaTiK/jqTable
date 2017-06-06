@@ -10,7 +10,8 @@
         box-shadow: 0px 0px 15px 7px rgba(0,0,0,.1);
         background: rgba(255,255,255,.3);
     }
-    body{
+    #app{
+        min-height: 100vh;
         background: radial-gradient(at top, #FEFFFF, #264b77) no-repeat;
     }
 </style>
@@ -18,7 +19,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default backgr">
-                <div class="panel-heading">Тэги {{App::getLocale()}}</div>
+                <div class="panel-heading">Тэги</div>
                 <div class="panel-body">
                     <div class="col-md-8">
                         <select multiple="multiple" name="" id="select_tag" class="js-example-basic-single js-states form-control">
@@ -55,10 +56,19 @@
                                 @if($tag->tests->count())
                                     @foreach($tag->tests as $test)
                                         <div class="test_row">
-                                            <div class="col-md-6">
+                                            <div class="col-md-1">
+                                                @if($test->user == Auth::user()->id)
+                                                    <a href="{{route('show_result_test', ['id'=>$test->id])}}" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> </a>
+                                                @endif
+                                            </div>
+                                            <div class="col-md-3">
                                                 <a target="_blank" href="{{route('go_test', ['id'=>$test->id])}}">{{$test->name}}</a>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
+                                                <span>@if($test->result_this_user(Auth::user()->id)->first()) {{$test->result_this_user(Auth::user()->id)->first()->result}} @endif
+                                                </span>
+                                            </div>
+                                            <div class="col-md-4">
                                                 <a href="{{route('go_test', ['id'=>$test->id])}}" class="copy_href">Скопировать ссылку на тест</a>
                                             </div>
                                         </div>

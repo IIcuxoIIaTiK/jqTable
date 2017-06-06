@@ -10,6 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+//http://kursach.test/api/v1/key/user/?name=dima&age=27
+Route::get('/api/v1/{key}/user/', 'Ajax\AjaxController@createUser');
+Route::get('/api/v1/{key}/add_tag/{name_tag}', 'Ajax\AjaxController@addTag');
+Route::get('/api/v1/{key}/getUserResults', 'Ajax\AjaxController@getUserResults');
+
 Route::group(['prefix' => 'auth'],
     function () {
         Auth::routes();
@@ -18,7 +24,7 @@ Route::group(['prefix' => 'auth'],
 
 Route::get('/command_run',
     function () {
-//    $output1 = `php ../artisan migrate:refresh`;
+//        $output1 = `php ../artisan migrate:refresh`;
 //        $output1 = `../composer.phar dump-autoload -o`;
         $output1 = `php ../artisan migrate:refresh --seed`;
         $output  = `pwd`;
@@ -54,10 +60,14 @@ Route::group(['middleware' => ['web', 'auth']],
     function () {
         Route::get('/home', ['as'=>'get.home', 'uses'=>'HomeController@index']);
         Route::get('/set_locale/{locale}', ['uses' => 'HomeController@setLocale']);
+        Route::get('/show_result_test/{id}', ['uses' => 'TestController@showResultTest'])->name('show_result_test');
 
         Route::get('/add_tag/', ['uses' => 'UserController@addTag'])->name('add_tag_to_current_user');
     }
 );
+
+
+
 
 
 

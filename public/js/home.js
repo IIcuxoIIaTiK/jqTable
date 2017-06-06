@@ -13,10 +13,9 @@ $(function() {
 
             $('#add_tag').click(function() {
                 let select_tag = $('#select_tag').val();
-                ajaxToViewCallback({url: route_add_tag, data: {tags: select_tag}, function($data){
-                    user_selected_tags = $data.data.tags_id;
-                    this.selectTags();
-                }})
+                ajaxToViewCallback({url: route_add_tag, data: {tags: select_tag}}, function($data){
+                    location.reload();
+                })
             });
             $('.show_test').click(function() {
                 $(this).toggleClass('active');

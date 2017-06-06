@@ -101,7 +101,9 @@
     </div>
     <div class="col-xs-3">
         <div class="text-right">
-            <button class="white_text end_test">Завершить</button>
+            @if(! $result)
+                <button class="white_text end_test">Завершить</button>
+            @endif
         </div>
     </div>
 
@@ -114,7 +116,7 @@
             <div class="panel panel-primary backgr">
                 <div class="panel-heading">
 
-                    <div class="row form-group" data-block="applicant_">
+                    <div class="row form-group">
                         <div class="col-xs-2">
                             <span class="form-inline">Наименование Теста :</span>
                         </div>
@@ -122,7 +124,7 @@
                             {{$test->name}}
                         </div>
                     </div>
-                    <div class="row form-group" data-block="applicant_">
+                    <div class="row form-group">
                         <div class="col-xs-2">
                             <span class="form-inline">Описание:</span>
                         </div>
@@ -134,16 +136,33 @@
                 </div>
 
             </div>
+            @if(! $result)
+                <button id="start_test">Пройти тест</button>
+                <form action="" id="form_answer">
+                    <div class="test-answer_block">
 
-            <button id="start_test">Пройти тест</button>
-            <form action="" id="form_answer">
-                <div class="test-answer_block">
+                    </div>
+                </form>
+            @else
+                <div class="panel panel-primary backgr">
+                    <div class="panel-heading">
+
+                        <div class="row form-group">
+                            <div class="col-xs-12">
+                                <h2 > Ваш результат - {{$result->result}}</h2>
+                            </div>
+                        </div>
+
+
+                    </div>
 
                 </div>
-            </form>
-        </div>
-        <div class="col-xs-4">
 
+            @endif
+        </div>
+        @if(! $result)
+
+            <div class="col-xs-4">
             <div class="panel panel-primary backgr pos_fixed">
                 <div class="panel-heading">
                     <div class="row form-group" data-block="applicant_">
@@ -167,6 +186,7 @@
                 </div>
             </div>
         </div>
+        @endif
 
     </div>
 </div>

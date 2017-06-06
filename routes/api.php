@@ -13,10 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-Route::middleware('auth:api')->get('/v1/create/user/', 'Ajax\AjaxController@createUser');
-Route::middleware('auth:api')->get('/v1/getUserResults/{login}', 'Ajax\AjaxController@getUserResults');
+//Route::middleware('api')->get('/v1/{key}/user/', 'Ajax\AjaxController@createUser');
+//Route::middleware('api')->post('/v1/{key}/user/', 'Ajax\AjaxController@createUser');
+//Route::middleware('api')->get('/v1/{key}/getUserResults/{login}', 'Ajax\AjaxController@getUserResults');
 
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateResultTestsTable extends Migration
+class CreateExternalSystemTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,12 @@ class CreateResultTestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('result_tests', function (Blueprint $table) {
-
+        Schema::create('external_system', function (Blueprint $table) {
+            //
             $table->increments('id');
-            $table->text('test_id');
-            $table->text('user_id')->nullable();
-
-            $table->text('result');
-            $table->text('max_ball');
-            $table->text('user_ball');
-
+            $table->text('key');
+            $table->text('name');
             $table->timestamps();
-
         });
     }
 
@@ -35,6 +29,6 @@ class CreateResultTestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('result_tests');
+        Schema::dropIfExists('external_system');
     }
 }

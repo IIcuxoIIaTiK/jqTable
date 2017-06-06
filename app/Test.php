@@ -24,6 +24,15 @@ class Test extends Model
         'questions' => 'array',
     ];
 
+    public function result()
+    {
+        return $this->hasMany('App\ResultTests');
+    }
+    public function result_this_user($id)
+    {
+        return $this->hasMany('App\ResultTests')->where('user_id', $id);
+    }
+
 
     /**
      * The attributes that should be hidden for arrays.
